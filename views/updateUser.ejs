@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs')%>
+<main class="w-full h-screen flex items-center justify-center">
+    <div class="container mx-auto">
+        <form class="w-2/5 mx-auto flex flex-col" action="/updateUser" method="POST">
+            <h1 class="text-3xl">Update user</h1>
+            <label for="firstname">Firstname</label>
+            <input class="py-3 px-6 border border-green-400 rounded-xl" value = "<%= userData.firstname%>" id= "firstname" name="firstname" placeholder="Firstname">
+
+            <label for="lastname">Lastname</label>
+            <input class="py-3 px-6 border border-green-400 rounded-xl" value = "<%= userData.lastname%>" id= "lastname" name="lastname" placeholder="Lastname">
+
+            <label for="email">Email</label>
+            <input class="py-3 px-6 border border-green-400 rounded-xl" value = "<%= userData.email%>" type="email" id= "email" name="email" placeholder="Emial">
+
+            <label for="number">Number</label>
+            <input class="py-3 px-6 border border-green-400 rounded-xl" value = "<%= userData.number%>" type="tel" id= "number" name="number" placeholder="Number">
+
+            <label for="avatar">Avatar</label>
+            <input class="py-3 px-6 border border-green-400 rounded-xl" value = "<%= userData.avatar%>" type="text" id= "avatar" name="avatar" placeholder="Avatar">
+
+            <label for="password">Password</label>
+            <input class="py-3 px-6 border border-green-400 rounded-xl" type="password" value = "<%= userData.password%>" id= "password" name="password" placeholder="Password">
+            <input type="hidden" value="<%= userData._id%>" name="userID">
+            <input class="py-3 px-6 bg-green-400 rounded-xl text-white" type="submit" value="SAVE">
+        </form>
+        <a href="http://localhost:3000/admin" class="py-3 px-6 bg-green-400 rounded-xl text-white" >BACK</a>
+    </div>
+</main>
+<%- include('includes/foot.ejs')%>

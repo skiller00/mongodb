@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs')%>
+<main>
+    <section class="container mx-auto mt-8 grid grid-cols-3 gap-4" >
+        <div class="rounded-xl p-4 bg-green-400 h-64 ">
+            <div class=" flex items-center ">
+                <div class="rounded-full w-24 h-24 overflow-hidden">
+                    <img src="<%=user.avatar%>" alt="">
+                </div>
+                <div>
+                    <h1 class="ml-6 text-white"> <%=user.firstname%> </h1>
+                    <h1 class="ml-6 text-white"> <%=user.lastname%> </h1>
+                    <h1 class="ml-6 text-white"> <%=user.email%> </h1>
+                    <h1 class="ml-6 text-white"> <%=user.number%> </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('includes/foot.ejs')%>
